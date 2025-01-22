@@ -68,6 +68,13 @@
 </head>
 
 <body class="body">
+  <div class="tv">
+    <div class="inner" id="tvinner"></div>
+    <!-- <video autoplay loop> -->
+    <!-- <source src="/img/bg.mp4" type="video/mp4"> -->
+    <!-- Your browser does not support the video tag. -->
+    <!-- </video> -->
+  </div>
   <div class="page-wrapper navbar-on-page">
     <div data-animation="default" class="navbar13_component delete-this-class w-nav" data-easing2="ease"
       data-easing="ease" data-collapse="medium" data-w-id="5a21d08b-02de-d4a1-9af6-b02f3153531e" role="banner"
@@ -526,10 +533,18 @@
         .catch(err => {
           console.error("err: ", err);
         });
+    }
+    const tvElement = document.getElementById('tvinner');
 
+    function createNoiseEffect() {
+      const randomX = Math.random() * 100 - 50; // Случайное значение по оси X
+      const randomY = Math.random() * 100 - 50; // Случайное значение по оси Y
 
+      tvElement.style.transform = `translate(${randomX}px, ${randomY}px)`;
     }
 
+    // Обновление несколько раз в секунду
+    setInterval(createNoiseEffect, 66);
   </script>
 </body>
 

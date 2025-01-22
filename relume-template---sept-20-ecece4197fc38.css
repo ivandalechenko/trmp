@@ -8415,3 +8415,33 @@ figcaption {
 .footer {
   padding: 30px 0px;
 }
+
+.tv {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  pointer-events: none;
+}
+
+/* 
+.tv video {
+  opacity: .2;
+  min-width: 100vw;
+  min-height: 100dvh;
+  object-fit: cover;
+} */
+
+.tv .inner {
+  background: url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png");
+  opacity: .07;
+  min-width: 200vw;
+  min-height: 200vh;
+  will-change: transform;
+  /* transform: translateX(-3.5%) translateY(-7%); */
+}
