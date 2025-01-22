@@ -8411,3 +8411,7 @@ figcaption {
 .header1_component {
   border-radius: 32px;
 }
+
+.footer {
+  padding: 30px 0px;
+}
